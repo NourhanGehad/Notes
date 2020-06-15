@@ -13,8 +13,6 @@ public class AppActivity extends AppCompatActivity {
     public BottomNavigationView bottomNavigationView;
     public static SQLiteHelper sqLiteHelper;
 
-    //Test comment
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

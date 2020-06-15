@@ -53,7 +53,10 @@ public class SettingsFragment extends Fragment {
                 SharedPreferences.Editor editor = mPrefs.edit();
                 editor.putString("username", typedUsername);
                 editor.commit();
-                Toast.makeText(getActivity(),"username saved successfully", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(),
+                        "username has been saved",
+                        Toast.LENGTH_SHORT)
+                        .show();
 
             }
         });
