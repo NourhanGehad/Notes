@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Notes</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add_new_note">Add New Note</string>
+    <string name="save">Save</string>
+    <string name="hint_note_title">Note title</string>
+    <string name="hint_note_desc">Note text</string>
+    <string name="edit_new_note">Edit Note</string>
+    <string name="instruction">Enter a username and click on save to save it to shared preference</string>
+</resources>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.notes.destinations.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+
+        <action
+            android:id="@+id/action_from_splash_to_home"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true"></action>
+
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.notes.destinations.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+
+        <action
+            android:id="@+id/action_from_home_to_edit"
+            app:destination="@id/editNoteFragment">
+            <argument
+                android:name="note_to_edit"
+                android:defaultValue="@null"
+                app:argType="com.example.notes.NoteModel"
+                app:nullable="true"/>
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.notes.destinations.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+
+    </fragment>
+    <fragment
+        android:id="@+id/addNoteFragment"
+        android:name="com.example.notes.destinations.AddNoteFragment"
+        android:label="fragment_add_note"
+        tools:layout="@layout/fragment_add_note" >
+
+    </fragment>
+    <fragment
+        android:id="@+id/editNoteFragment"
+        android:name="com.example.notes.destinations.EditNoteFragment"
+        android:label="fragment_edit_note"
+        tools:layout="@layout/fragment_edit_note" >
+        <argument
+            android:name="note_to_edit"
+            android:defaultValue="@null"
+            app:argType="com.example.notes.NoteModel"
+            app:nullable="true"/>
+
+
+    </fragment>
+</navigation>
